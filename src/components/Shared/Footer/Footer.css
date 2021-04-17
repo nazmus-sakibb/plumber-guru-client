@@ -1,0 +1,32 @@
+.footer-area li{
+    padding-bottom: 10px;
+}
+
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    color: #0984e3;
+    border-radius: 50%;
+    border: 1px solid #0984e3;
+    padding: 10px;
+}
+.social-media .active-icon{
+    background-color: #2d3436 ;
+    color:white;
+}
+
+.plumbing-services li a{
+    text-decoration: none;
+    color: black;
+}
+
+.plumbing-services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-area {
+    background-color: #19d3ae98;
+    overflow: hidden;
+    padding: 20px;
+}
