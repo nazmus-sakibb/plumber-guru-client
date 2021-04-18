@@ -20,8 +20,8 @@ const BookingList = () => {
                 <div>
                     <h2>Booking List</h2>
                 </div>
-                <div className="d-flex justify-content-center ">
-                    <div className="row w-75 pt-5">
+                <div className="">
+                    <div className="row pt-5">
                         {
                             bookings.map(booking => <BookingDetail booking={booking} id={booking._id}></BookingDetail>)
                         }
