@@ -14,7 +14,7 @@ const AddService = () => {
             description: data.description,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addService`;
+        const url = `https://vast-ravine-13356.herokuapp.com/addService`;
 
         fetch(url, {
             method: 'POST',
@@ -50,7 +50,6 @@ const AddService = () => {
                 <input name="name" id="name" placeholder="Enter Service Name" ref={register}/>
                 <br />
                 <label htmlFor="description"><strong>Service Description: </strong></label>
-                {/* <input name="description" id="description" placeholder="Enter Sercice Description" ref={register}/> */}
                 <textarea cols="70" rows="5" name="description" id="description" placeholder="Enter Sercice Description" ref={register}></textarea>
                 <br />
                 <label htmlFor="img"><strong>Add Photo</strong></label>

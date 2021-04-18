@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from '../../App';
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
+import Sidebar from '../Sidebar/Sidebar';
 import './Book.css';
 
 const Checkout = () => {
@@ -12,14 +13,34 @@ const Checkout = () => {
     const [product, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://vast-ravine-13356.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [id])
-    const selectedProduct = product.find(pd => pd._id === id);
+    const selectedService = product.find(pd => pd._id === id);
 
-    if (selectedProduct) {
-        console.log(selectedProduct);
+    if (selectedService) {
+        console.log(selectedService);
+    }
+
+    
+    const handlePayment = (selectedService) => {
+        console.log(selectedService);
+        // const serviceData = {
+        //     name: selectedService.name,
+        //     description: selectedService.description,
+        //     imageURL: selectedService.imageURL
+        // }
+        const url = `https://vast-ravine-13356.herokuapp.com/bookingList`;
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(selectedService)
+        })
+        .then(res => console.log('server site response', res))
     }
 
 
@@ -27,14 +48,14 @@ const Checkout = () => {
         <section>
             <div className="row">
                 <div className="col-md-3">
-                    <h4>Sidebar</h4>
+                    <Sidebar/>
                 </div>
                 <div className="col-md-9">
-                    {selectedProduct && <div className="booking-card">
+                    {selectedService && <div className="booking-card">
                         <h2>Book</h2>
                         <p><strong>Name:</strong> {loggedInUser.name}</p>
                         <p><strong>Email:</strong> {loggedInUser.email}</p>
-                        <p><strong>Service Title:</strong> {selectedProduct.name}</p>
+                        <p><strong>Service Title:</strong> {selectedService.name}</p>
 
                         <br/>
                         
@@ -42,7 +63,8 @@ const Checkout = () => {
                             <h4 className="text-primary">Pay with Stripe</h4>
                             <ProcessPayment/>
                             <br/>
-                            <button className="btn btn-primary">Pay</button>
+                            <span>Your Service Charged will be <strong>$999</strong> </span>
+                            <button className="btn btn-primary" onClick={() => handlePayment(selectedService)}>Pay</button>
                         </div>
                     </div>}
                 </div>

@@ -2,3 +2,9 @@
     overflow: hidden;
     margin-top: 70px;
 }
+
+
+.services-container .service-card:hover {
+    background-color: #dfe6e9;
+    transition:  .1s  all ease-in-out !important;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Testimonial from '../Testimonial/Testimonial';
 import './Testimonials.css';
 import wilson from '../../../images/wilson.png';
@@ -27,6 +27,15 @@ const testimonialData = [
 ]
 
 const Testimonials = () => {
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(() => {
+        fetch('https://vast-ravine-13356.herokuapp.com/testimonials')
+            .then(res => res.json())
+            .then(data => setTestimonials(data))
+    }, [])
+
+
     return (
        <section className="testimonials my-5 py-5">
            <div className="container">
@@ -36,7 +45,7 @@ const Testimonials = () => {
                </div>
                <div className="card-deck mt-5 row">
                     {
-                        testimonialData.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial.name}/>)
+                        testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial._id}/>)
                     }
                 </div>
            </div>

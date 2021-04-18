@@ -12,7 +12,8 @@ import Navbar from './components/Navbar/Navbar';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Book from './components/Book/Book';
 import NotFound from './components/NotFound/NotFound';
-import AddReview from './components/AddReview/AddReview';
+import AddTestimonial from './components/AddTestimonial/AddTestimonial';
+import BookingList from './components/BookingList/BookingList';
 
 export const UserContext = createContext();
 
@@ -29,8 +30,11 @@ function App() {
           <Route path="/addService">
             <AddService></AddService>
           </Route>
-          <Route path="/addReview">
-            <AddReview></AddReview>
+          <Route path="/bookingList">
+            <BookingList></BookingList>
+          </Route>
+          <Route path="/addTestimonial">
+            <AddTestimonial></AddTestimonial>
           </Route>
           <Route path="/login">
             <Login></Login>

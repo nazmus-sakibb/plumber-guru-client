@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 const ServiceDetail = ({service, id}) => {
     return (
-        <div className="col-md-4 col-sm-12 text-center">
+        <div className="col-md-4 col-sm-12 text-center service-card">
             <img className="img-fluid" style={{height: '200px'}} src={service.imageURL} alt=""/>
             <h4 style={{color: '#585858'}} className="my-3">{service.name}</h4>
             <p className="text-secondary">{service.description}</p>
             <Link to={`/book/${id}`}><button className="btn btn-primary text-white text-decoration-none">Book Now</button></Link>
-            
         </div>
     );
 };

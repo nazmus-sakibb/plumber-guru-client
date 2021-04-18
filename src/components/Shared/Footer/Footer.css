@@ -11,13 +11,11 @@
     padding: 10px;
 }
 .social-media .active-icon{
-    background-color: #2d3436 ;
     color:white;
 }
 
 .plumbing-services li a{
     text-decoration: none;
-    color: black;
 }
 
 .plumbing-services ul {
@@ -26,7 +24,8 @@
 }
 
 .footer-area {
-    background-color: #19d3ae98;
+    background-color: #2d3436;
     overflow: hidden;
     padding: 20px;
+    color: white;
 }

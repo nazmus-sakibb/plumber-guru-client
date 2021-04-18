@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-// import FooterCol from '../../Shared/FooterCol/FooterCol';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 

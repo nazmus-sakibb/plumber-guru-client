@@ -1,0 +1,9 @@
+.bookingDetail-card {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.bookingDetail-card img{
+    border-radius: 5px;
+}
