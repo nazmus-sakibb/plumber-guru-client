@@ -9,7 +9,7 @@ const FeaturedService = () => {
         <section className="features-service pb-0 my-5">
             <div className="container mb-5">
                 <div className="row mb-5">
-                    <div className="col-md-5 mb-4 m-md-0">
+                    <div className="col-md-5 col-sm-12 mb-4 m-md-0">
                         <div>
                             <img className="img-fluid" src={featured} alt="" />
                         </div>
@@ -17,7 +17,7 @@ const FeaturedService = () => {
                             <img style={{height: '250px', width: '100%'}} className="img-fluid" src={featuredTwo} alt="" />
                         </div>
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-md-7 col-sm-12">
                         <h4>Who we are</h4>
                         <h1>An Experienced Team of Skilled Professional</h1>
                         <p className="text-secondary my-5">
