@@ -4,7 +4,7 @@ import { faStar, faInstagram, faGooglePlusG } from '@fortawesome/free-solid-svg-
 
 const Testimonial = ({testimonial}) => {
     return (
-        <div className="card shadow-sm col-md-4 col-sm-12">
+        <div className="card shadow-sm col-md-4 col-sm-12 mb-4">
             <div className="card-footer d-flex align-items-center">
                 <img className="mx-3" src={testimonial.imageURL} alt="" width="60"/>
                 <div>
