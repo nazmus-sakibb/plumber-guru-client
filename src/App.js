@@ -17,6 +17,8 @@ import NotFound from './components/NotFound/NotFound';
 import AddTestimonial from './components/AddTestimonial/AddTestimonial';
 import BookingList from './components/BookingList/BookingList';
 import ManageServices from './components/ManageServices/ManageServices';
+import ParticlesContainer from './components/ParticlesContainer/ParticlesContainer';
+
 
 export const UserContext = createContext();
 
@@ -25,6 +27,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
+        <ParticlesContainer />
         <Navbar />
         <Switch>
           <PrivateRoute path="/book/:id">
