@@ -12,18 +12,22 @@ const OrderList = () => {
             .then(data => setOrders(data))
     }, [])
     return (
-        <div className="row">
-            <div className="col-md-3">
-                <Sidebar />
-            </div>
-            <div className="col-md-9">
-                <div>
-                    <h2>Order List</h2>
-                </div>
-                <div className="row pt-5">
-                    {
-                        orders.map(order => <OrderDetail order={order} id={order._id}></OrderDetail>)
-                    }
+        <div className="container-dashboard">
+            <div className="container-dash">
+                <div className="row">
+                    <div className="col-md-3">
+                        <Sidebar />
+                    </div>
+                    <div className="col-md-9 container-box">
+                        <div>
+                            <h2>Order List</h2>
+                        </div>
+                        <div className="row pt-5">
+                            {
+                                orders.map(order => <OrderDetail order={order} id={order._id}></OrderDetail>)
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

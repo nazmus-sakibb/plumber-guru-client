@@ -44,22 +44,27 @@ const AddService = () => {
 
 
     return (
-        <div className="row">
-            <div className="col-md-3">
-                <Sidebar />
-            </div>
-            <div className="col-md-9">
-                <h3>Add Service area</h3>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input name="name" placeholder="Enter Service Name" ref={register} />
-                    <br /> <br/>
-                    <textarea cols="70" rows="5" name="description" placeholder="Enter Sercice Description" ref={register}></textarea>
-                    <br /> <br/>
-                    <label htmlFor="img"><strong>Add Photo</strong></label>
-                    <input id="img" name="image" type="file" onChange={handleImageUpload} />
-                    <br /> <br/>
-                    <input type="submit" value="Submit" />
-                </form>
+        <div className="container-dashboard">
+            <div className="container-dash">
+                <div className="row">
+                    <div className="col-md-3">
+                        <Sidebar />
+                    </div>
+                    <div className="col-md-9 container-box">
+                        <h3>Add Service</h3>
+                        <br />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <h5>Service Title: <input name="name" placeholder="Enter Service Title" ref={register} /></h5>
+                            <br />
+                            <h5>Description: <textarea cols="70" rows="5" name="description" placeholder="Enter Service Description" ref={register}></textarea></h5>
+                            <br /> 
+                            <label htmlFor="img"><strong>Add Photo</strong></label>
+                            <input id="img" name="image" type="file" onChange={handleImageUpload} />
+                            <br /> <br />
+                            <input type="submit" value="Submit" className="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     );

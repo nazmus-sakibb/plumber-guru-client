@@ -1,5 +1,20 @@
 .sidebar ul li{
     text-decoration: none !important;
-    color: black !important;
+    /* color: black !important; */
+    margin-bottom: 1em;
+    font-size: 20px;
+    padding: 7px 0;
+}
+
+.sidebar ul li:hover {
+    background-color: #F4F7FC;
+}
+
+.sidebar{
+    height: 100vh;
+    background: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 20px 20px 0 0;
 }
 

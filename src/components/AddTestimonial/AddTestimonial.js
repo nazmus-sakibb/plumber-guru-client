@@ -45,26 +45,31 @@ const AddTestimonial = () => {
 
 
     return (
-        <div className="row">
-            <div className="col-md-3">
-                <Sidebar/>
-            </div>
-            <div className="col-md-9">
-                <h3>AddTestimonial area</h3>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    {/* <label htmlFor="name"><strong>Service Name: </strong></label> */}
-                    <input style={{ width: '300px' }} name="name" id="name" placeholder="Enter Your Name" ref={register} />
-                    <br /> <br/>
-                    <input style={{ width: '300px' }} name="cname" placeholder="Company's Name, Designation" ref={register} />
-                    <br /> <br/>
-                    {/* <label htmlFor="description"><strong>Service Description: </strong></label> */}
-                    <textarea cols="70" rows="5" name="description" id="description" placeholder="Enter Sercice Description" ref={register}></textarea>
-                    <br /> <br/>
-                    <label htmlFor="img"><strong>Add Photo</strong></label>
-                    <input id="img" name="image" type="file" onChange={handleImageUpload} />
-                    <br /> <br/>
-                    <input type="submit" value="Submit" />
-                </form>
+        <div className="container-dashboard">
+            <div className="container-dash">
+                <div className="row">
+                    <div className="col-md-3">
+                        <Sidebar />
+                    </div>
+                    <div className="col-md-9 container-box">
+                        <h3>Add Testimonial</h3>
+                        <br />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            {/* <label htmlFor="name"><strong>Service Name: </strong></label> */}
+                            <h5>Name: <input style={{ width: '300px' }} name="name" id="name" placeholder="Enter Your Name" ref={register} /></h5>
+                            <br />
+                            <h5>Company's Name & Designation: <input style={{ width: '300px' }} name="cname" placeholder="Company's Name, Designation" ref={register} /></h5>
+                            <br /> <br />
+                            {/* <label htmlFor="description"><strong>Service Description: </strong></label> */}
+                            <h5>Your Feedback: <textarea cols="70" rows="5" name="description" id="description" placeholder="Enter Your Feedback" ref={register}></textarea></h5>
+                            <br /> <br />
+                            <label htmlFor="img"><strong>Add Photo</strong></label>
+                            <input id="img" name="image" type="file" onChange={handleImageUpload} />
+                            <br /> <br />
+                            <input type="submit" value="Submit" className="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     );

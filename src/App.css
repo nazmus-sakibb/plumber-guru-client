@@ -1,7 +1,16 @@
-/******************** Particles js ********************/
-.tsparticles-canvas-el {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-  }
+/******************** DashBoard Area ********************/
+.container-dashboard {
+  background: #F4F7FC;
+}
 
+.container-dash {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.container-box {
+  background: white;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 20px;
+}
