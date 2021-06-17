@@ -12,19 +12,23 @@ const BookingList = () => {
     }, [])
 
     return (
-        <div className="row">
-            <div className="col-md-3">
-                <Sidebar />
-            </div>
-            <div className="col-md-9">
-                <div>
-                    <h2>Booking List</h2>
-                </div>
-                <div className="">
-                    <div className="row pt-5">
-                        {
-                            bookings.map(booking => <BookingDetail booking={booking} id={booking._id}></BookingDetail>)
-                        }
+        <div className="container-dashboard">
+            <div className="container-dash">
+                <div className="row">
+                    <div className="col-md-3">
+                        <Sidebar />
+                    </div>
+                    <div className="col-md-9 container-box">
+                        <div>
+                            <h2>Booking List</h2>
+                        </div>
+                        <div className="">
+                            <div className="row pt-5">
+                                {
+                                    bookings.map(booking => <BookingDetail booking={booking} id={booking._id}></BookingDetail>)
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
